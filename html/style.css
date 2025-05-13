@@ -1,0 +1,295 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fefae0;
+  color: #333;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.hero-header {
+  height: 100vh;
+  background-image: url('riocapa.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.3); /* escurece um pouco a imagem */
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+.navbar {
+  width: 95%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.logo img {
+  height: 100px;
+}
+
+.logo span {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.menu {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: #ffc107;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.icons img {
+  height: 20px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.icons img:hover {
+  transform: scale(1.1);
+}
+
+.btn-delivery {
+  background-color: #f1c40f;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  margin-left: 10px;
+  transition: background-color 0.3s;
+}
+
+.btn-delivery:hover {
+  background-color: #d4ac0d;
+}
+
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #FEFAE0;
+  padding: 10px 20px;
+  border-bottom: 2px solid #ccc;
+}
+
+.logo {
+  width:150px;
+}
+
+
+
+.hero {
+  text-align: center;
+}
+
+.hero-img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.sobre {
+  background-color: #23456a;
+  color: #FEFAE0;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.sobre h2 {
+  margin-bottom: 10px;
+  font-size: 35px;
+}
+
+.sobre p {
+  max-width: 1000px;
+  margin: 0 auto 20px auto;
+  font-size: 25px;
+  line-height: 1.6;
+}
+
+.imagens-sobre {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  flex-wrap: wrap;
+}
+
+.imagens-sobre img {
+  width: 200px;
+  border-radius: 10px;
+}
+
+.unidades {
+  background-color: #fefae0;
+  color:#23456a;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.unidades h2 {
+  margin-bottom: 20px;
+}
+
+.unidade-img {
+  width: 200px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  display: inline-block;
+  width: 200px;          /* Tamanho fixo (pode ajustar) */
+  margin: 10px;
+}
+
+.rodape {
+  background-color: #23456A;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
+/* Estilos gerais */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #1b1b1b; /* Cor de fundo escura */
+  color: #fff; /* Texto claro */
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #ffcc00; /* Amarelo vibrante */
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+/* Estilo das categorias */
+.categorias {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.categoria {
+  width: 45%;
+  background-color: #333;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.categoria h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #ffcc00;
+  margin-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Estilo dos itens */
+.itens {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  padding: 15px 0;
+  border-bottom: 1px solid #444;
+}
+
+.item h3 {
+  font-size: 1.6rem;
+  color: #fff;
+  margin: 0;
+  font-weight: 600;
+}
+
+.item p {
+  font-size: 1rem;
+  color: #bbb;
+  margin: 5px 0;
+}
+
+.preco {
+  font-size: 1.2rem;
+  color: #ffcc00;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Efeitos no hover */
+.item:hover {
+  background-color: #444;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.item:hover h3 {
+  color: #ffcc00;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .categorias {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .categoria {
+    width: 100%;
+  }
+}
