@@ -135,7 +135,7 @@ body {
 
 .sobre {
   background-color: #23456a;
-  color: #FEFAE0;
+  color:#FEFAE0;
   padding: 40px 20px;
   text-align: center;
 }
@@ -143,6 +143,7 @@ body {
 .sobre h2 {
   margin-bottom: 10px;
   font-size: 35px;
+  color:#fefae0;
 }
 
 .sobre p {
@@ -169,127 +170,97 @@ body {
   color:#23456a;
   padding: 40px 20px;
   text-align: center;
+  
 }
 
 .unidades h2 {
   margin-bottom: 20px;
 }
 
-.unidade-img {
+.imagem-unidade {
   width: 200px;
   border-radius: 10px;
   margin-bottom: 10px;
-  display: inline-block;
-  width: 200px;          /* Tamanho fixo (pode ajustar) */
+  display: inline-block;    
   margin: 10px;
+
 }
 
+.imagem-unidade img {
+  width: 200px;
+  border-radius: 10px;
+  justify-content: center;
+}
+
+
 .rodape {
-  background-color: #23456A;
-  color: white;
+  background-color: #f9fbfc;
+  color: #fefae0;
   text-align: center;
   padding: 20px;
   font-size: 14px;
 }
 
 /* Estilos gerais */
+
+
+.hero-header1 {
+  height: 100vh;
+  background-image: url('M\ E\ N\ U.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #1b1b1b; /* Cor de fundo escura */
-  color: #fff; /* Texto claro */
   margin: 0;
   padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #ffffff;
+  text-align: center;
+  color: #2f1b00;
 }
 
 .container {
-  width: 80%;
-  margin: 0 auto;
-  padding: 50px 0;
+  max-width: 600px;
+  margin: 100px auto;
+  padding: 20px;
 }
 
 h1 {
-  text-align: center;
-  font-size: 2.5rem;
-  color: #ffcc00; /* Amarelo vibrante */
-  margin-bottom: 30px;
+  font-size: 32px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+h1 strong {
   font-weight: 700;
+  color: #4c2f00; /* cor do "BUMBU" */
 }
 
-/* Estilo das categorias */
-.categorias {
-  display: flex;
-  justify-content: space-between;
-  gap: 50px;
-  flex-wrap: wrap;
+p {
+  font-size: 18px;
+  color: #333;
 }
 
-.categoria {
-  width: 45%;
-  background-color: #333;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.categoria h2 {
-  text-align: center;
-  font-size: 2rem;
-  color: #ffcc00;
-  margin-bottom: 20px;
-  font-weight: 700;
-  letter-spacing: 1px;
-}
-
-/* Estilo dos itens */
-.itens {
-  display: flex;
-  flex-direction: column;
-}
-
-.item {
-  padding: 15px 0;
-  border-bottom: 1px solid #444;
-}
-
-.item h3 {
-  font-size: 1.6rem;
-  color: #fff;
-  margin: 0;
-  font-weight: 600;
-}
-
-.item p {
-  font-size: 1rem;
-  color: #bbb;
-  margin: 5px 0;
-}
-
-.preco {
-  font-size: 1.2rem;
-  color: #ffcc00;
+p strong {
   font-weight: bold;
-  margin-top: 10px;
 }
 
-/* Efeitos no hover */
-.item:hover {
-  background-color: #444;
+.button {
+  margin-top: 30px;
+  padding: 15px 40px;
+  background-color: #d4aa1d; /* amarelo mostarda */
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
 }
 
-.item:hover h3 {
-  color: #ffcc00;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-  .categorias {
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .categoria {
-    width: 100%;
-  }
+.button:hover {
+  background-color: #b89117;
 }
