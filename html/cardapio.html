@@ -33,24 +33,57 @@
   <p>Acesse nosso cardápio online. <strong>Clique abaixo</strong></p>
 
   <div style="text-align: center; margin-top: 30px;">
-    <a href="conline.html" class="button">CARDÁPIO ONLINE</a>
+    <a href="menuoline.html" class="button">CARDÁPIO ONLINE</a>
     </div>
-<section class="menuf">
+
 <div class="container1"></div>
   <h1><strong>NOSSOS PRATOS</strong></h1>
+  <p></p>
 
 
-<div class="menufimg">
-  <img src="pavec.png" alt="pavec">
-  <img src="acaraje.png" alt="acaraje">
-  <img src="churrasco.png" alt="churrasco">
-  <img src="feijoada.png" alt="feijoada">
-  
+
+
+<div class="carrossel">
+  <div class="slides">
+    <img src="moqueca.png" alt="Imagem 1">
+    <img src="churrasco.png" alt="Imagem 2">
+    <img src="feijoada.png" alt="Imagem 3">
+    <img src="acaraje.png" alt="Imagem 4">
+    <img src="boboc.png" alt="imagem 5 ">
+    <img src="pavec.png" alt="imagem 6">
+    <img src="bolinhoc.png" alt="imagem 7">
+
+  </div>
+  <button class="prev" onclick="mudarSlide(-1)">&#10094;</button>
+  <button class="next" onclick="mudarSlide(1)">&#10095;</button>
 </div>
-</section>
+<script>
+  let slideIndex = 0;
+
+  function mudarSlide(direcao) {
+    const slides = document.querySelector('.slides');
+    const totalSlides = slides.children.length;
+
+    slideIndex += direcao;
+
+    // Loop infinito
+    if (slideIndex < 0) {
+      slideIndex = totalSlides - 1;
+    } else if (slideIndex >= totalSlides) {
+      slideIndex = 0;
+    }
+
+    const slideWidth = slides.children[0].clientWidth;
+    slides.style.transform = `translateX(-${slideIndex * slideWidth}px)`;
+  }
+
+  // Tornar os slides com largura fixa para funcionamento do carrossel
+  window.addEventListener('resize', () => {
+    mudarSlide(0);
+  });
+</script>
+
+
 </body>
-
-
-
 
 

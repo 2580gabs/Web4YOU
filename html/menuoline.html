@@ -1,0 +1,423 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Cardápio - Palácio Tropical</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Cabeçalho */
+    header {
+      background-color: #000;
+      color: #fff;
+      padding: 20px 0;
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .header-left h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    .header-left p {
+      margin: 5px 0 0;
+      font-size: 14px;
+    }
+
+    .header-left a {
+      color: #fff;
+      text-decoration: none;
+      margin-right: 5px;
+    }
+
+    .header-left a:hover {
+      text-decoration: underline;
+    }
+
+    .header-right img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      object-fit: cover;
+      background-color: white;
+    }
+
+    /* Container principal */
+    .container {
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+
+    /* Filtros */
+    .filtros {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .filtros input,
+    .filtros select {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      flex: 1;
+    }
+
+    .filtros input::placeholder {
+      color: #999;
+    }
+
+    /* Categorias e Itens */
+    .categoria {
+      display: none;
+    }
+
+    .categoria.ativa {
+      display: block;
+    }
+
+    .categoria h2 {
+      margin-top: 40px;
+      margin-bottom: 15px;
+    }
+
+    .item {
+      background-color: #fff;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .info {
+      max-width: 70%;
+    }
+
+    .info h3 {
+      margin: 0;
+      font-size: 20px;
+    }
+
+    .info p {
+      margin: 5px 0;
+      color: #555;
+    }
+
+    .preco {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .item img {
+      width: 120px;
+      height: 80px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cabeçalho com logo e links -->
+  <header>
+    <div class="header-container">
+      <div class="header-left">
+        <h1>Palácio Tropical</h1>
+        <p>
+          <a href="#">Ver mais</a> –
+          <a href="#">Avaliar estabelecimento</a><br>
+          <a href="#">Ver tempo e taxa de entrega</a> <strong><a href="cardapio.html">VOLTAR</a></strong>
+        </p>
+      </div>
+      <div class="header-right">
+        <img src="logop.png" alt="Logo do Palácio Tropical">
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <!-- Filtros: pesquisa + seletor de categoria -->
+    <div class="filtros">
+      <input type="text" id="pesquisaProduto" placeholder="🔍 Pesquisar produto" oninput="filtrarProdutos()">
+      <select id="filtroCategoria" onchange="filtrarCategoria()">
+        <option value="todas">Selecione uma categoria</option>
+        <option value="entradas">Entradas</option>
+        <option value="pratos">Pratos Principais</option>
+        <option value="sobremesas">Sobremesas</option>
+        <option value="bebidas">Bebidas</option>
+      </select>
+    </div>
+
+    <!-- ENTRADAS -->
+    <section id="entradas" class="categoria">
+      <h2>ENTRADAS</h2>
+      <div class="item">
+        <div class="info">
+          <h3>Bolinho de Camarão</h3>
+          <p>Delicioso bolinho recheado com camarões selecionados, temperos especiais da casa e massa crocante por fora e cremosa por dentro.</p>
+          <p class="preco">R$ 76,00 - Porção de 300g</p>
+        </div>
+        <img src="bolinhoc.png" alt="Bolinho de Camarão">
+      </div>
+       <div class="item">
+        <div class="info">
+          <h3>Batata em Conserva com Bacon</h3>
+          <p>Crocante por fora, saborosa por dentro! Barquinha recheada com batata em conserva temperada, finalizada com pedacinhos de bacon crocante para aquele toque especial.</p>
+          <p class="preco">R$ 80,00 - Porção de 350g</p>
+        </div>
+        <img src="batata.jpg" alt="Batata">
+      </div>
+       <div class="item">
+        <div class="info">
+          <h3>Tapioca</h3>
+          <p>Clássica e irresistível! Feita na hora com goma fresquinha, crocante por fora e macia por dentro. Escolha seu recheio preferido e aproveite essa delícia tipicamente brasileira.</p>
+          <p class="preco">R$ 15,00 -Unidade</p>
+        </div>
+        <img src="tapioca.webp" alt="tapioca">
+      </div>
+       <div class="item">
+        <div class="info">
+          <h3>Mini pasteis</h3>
+          <p>Casquinha crocante e recheios generosos! Escolha entre carne, queijo, frango com catupiry ou calabresa com cebola. Um clássico que nunca sai de moda.</p>
+          <p class="preco">R$ 35,00 -15 unidades</p>
+        </div>
+        <img src="pastel.webp" alt="pastel">
+      </div>
+       <div class="item">
+        <div class="info">
+          <h3>Coxinha</h3>
+          <p>A queridinha do Brasil! Massa leve e dourada, recheada com frango desfiado temperado no capricho. Crocante por fora e super suculenta por dentro.</p>
+          <p class="preco">R$ 20,00 -Unidade</p>
+        </div>
+        <img src="coxinha.jpg" alt="tapioca">
+      </div>
+      <div class="item">
+        <div class="info">
+          <h3>Barquinha de Salada de Maionese</h3>
+          <p>Uma deliciosa barquinha crocante recheada com nossa tradicional salada de maionese caseira. Refrescante, cremosa e perfeita como entrada ou acompanhamento!</p>
+          <p class="preco">R$ 55,00 - Porção de 200g</p>
+        </div>
+        <img src="barquinha-maionese.jpg" alt="Barca">
+      </div>
+      <div class="item">
+    <div class="info">
+      <h3>Bolinho de Queijo</h3>
+      <p>Crocante por fora, cremoso por dentro! Nosso Bolinho de Queijo é feito com uma seleção especial de queijos e massa douradinha que derrete na boca. Uma explosão de sabor que vai conquistar seu paladar!".</p>
+      <p class="preco">R$ 30,00 -Porção 250g</p>
+    </div>
+    <img src="bolinhoq.png" alt="Peixe Grelhado com Legumes">
+  </div>
+     <div class="item">
+    <div class="info">
+      <h3>Pão de Queijo </h3>
+      <p>Deliciosos pãezinhos de queijo, crocantes por fora e incrivelmente macios por dentro. Preparados com queijo de verdade e aquele toque mineiro que conquista qualquer paladar!.</p>
+      <p class="preco">R$ 35,00 -Porção de 300g</p>
+    </div>
+    <img src="PAOQUEIJO.jpg" alt="Peixe Grelhado com Legumes">
+  </div>
+</section>
+     <!-- PRATOS PRINCIPAIS -->
+    <section id="pratos" class="categoria">
+      <h2>PRATOS PRINCIPAIS</h2>
+      <div class="item">
+        <div class="info">
+          <h3>Moqueca de Camarão</h3>
+          <p>Moqueca com camarões frescos, leite de coco, azeite de dendê e temperos especiais. Acompanha arroz e farofa.</p>
+          <p class="preco">R$ 98,00</p>
+        </div>
+        <img src="moqueca.png" alt="Moqueca de Camarão">
+      </div>
+     <div class="item">
+        <div class="info">
+          <h3>Churrasco Completo</h3>
+          <p>Moqueca com camarões frescos, leite de coco, azeite de dendê e temperos especiais. Acompanha arroz e farofa.</p>
+          <p class="preco">R$ 100,00</p>
+        </div>
+        <img src="churrasco.png" alt="churrasco">
+    </div>  
+     <div class="item">
+        <div class="info">
+          <h3>Camarões ao creme de mandioca com temperos típicos da culinária baiana.</h3>
+          <p>Camarões refogados no leite de coco com azeite de dendê, creme de mandioca (aipim) e temperos aromáticos como alho, cebola e coentro. Um prato cremoso e cheio de sabor, servido com arroz branco e farofa de dendê.
+
+Serve: 1 pessoa</p>
+          <p class="preco">R$ 98,00</p>
+        </div>
+        <img src="boboc.png" alt="bobo">
+    </div>
+
+       <div class="item">
+        <div class="info">
+      <h3>Feijoada Tradicional</h3>
+      <p>Feijão preto cozido lentamente com carnes nobres como linguiça, carne-seca e costelinha, temperado com alho, cebola e louro. Acompanha arroz branco, farofa, couve refogada e laranja em rodelas.
+
+Serve: 1 pessoa</p>
+      <p class="preco">R$ 85,00</p>
+    </div>
+    <img src="feijoada.png" alt="feijoada">
+  </div>
+       
+  <div class="item">
+        <div class="info">
+      <h3>Acarajé</h3>
+      <p>Bolinho de feijão-fradinho frito no azeite de dendê, recheado com vatapá cremoso, caruru, camarão seco e acompanhado de salada de tomate e pimenta. Tradição da culinária baiana, com sabor marcante e picância na medida certa.
+
+Serve: 1 unidade</p>
+      <p class="preco">R$ 70,00</p>
+    </div>
+    <img src="acaraje.png" alt="acaraje">
+  </div>
+  <div class="item">
+        <div class="info">
+      <h3>Vatapá</h3>
+      <p>Delicioso creme feito com pão, camarão seco, leite de coco, amendoim, castanha de caju, azeite de dendê e temperos aromáticos. Serve como acompanhamento perfeito para acarajé ou arroz branco, trazendo um sabor marcante e cremoso da Bahia.
+
+Serve: 1 pessoa (como acompanhamento)</p>
+      <p class="preco">R$ 50,00</p>
+    </div>
+    <img src="vatapá.jpg" alt="vatapá">
+  </div>
+  <div class="item">
+        <div class="info">
+      <h3>Carne de Sol com Mandioca Frita</h3>
+      <p>Carne de sol cuidadosamente grelhada, servida com mandioca frita crocante por fora e macia por dentro. Acompanha vinagrete caseiro e manteiga de garrafa, uma combinação típica do Nordeste que traz sabor e tradição.</p>
+      <p class="preco">R$ 85,00 -Porção 600g</p>
+    </div>
+    <img src="carne-de-sol-com-mandioca.jpeg" alt="cdscm">
+  </div>
+  
+  <div class="item">
+        <div class="info">
+      <h3> Baião de Dois</h3>
+      <p>Prato tradicional nordestino feito com arroz, feijão verde ou feijão de corda, carne seca desfiada, queijo coalho, cebola, alho e coentro fresquinho. Uma mistura saborosa e completa, típica da culinária regional.
+
+Serve: 2 pessoas</p>
+      <p class="preco">R$ 99,00</p>
+    </div>
+    <img src="carne-de-sol-com-mandioca.jpeg" alt="cdscm">
+  </div>
+  <div class="item">
+        <div class="info">
+      <h3>  Arroz com Pequi </h3>
+      <p>Arroz branco cozido com pedaços de pequi frescos, temperado com alho, cebola e coentro. Prato tradicional do Centro-Oeste brasileiro, que traz um sabor único, levemente picante e aromático, perfeito para acompanhar carnes e pratos regionais.
+
+Serve: 1 pessoa</p>
+      <p class="preco">R$ 99,00</p>
+    </div>
+    <img src="acp.jpg" alt="aCP">
+  </div>
+</section>
+
+    <!-- SOBREMESAS -->
+    <section id="sobremesas" class="categoria">
+      <h2>SOBREMESAS</h2>
+      <div class="item">
+        <div class="info">
+          <h3>Pudim de Leite</h3>
+          <p>Delicioso pudim feito com leite condensado, leite, ovos e açúcar, assado em banho-maria até atingir uma textura macia e cremosa. Finalizado com uma calda dourada de caramelo, é a sobremesa perfeita para fechar qualquer refeição.
+
+Serve: 1 porção.</p>
+          <p class="preco">R$ 25,00</p>
+        </div>
+        <img src="pudim.jpg" alt="Pudim de Leite">
+      </div>
+     <div class="item">
+        <div class="info">
+          <h3>Brigadeiro de chocolate belga</h3>
+          <p>Docinho clássico brasileiro preparado com leite condensado, manteiga e chocolate belga puro, garantindo uma textura cremosa e sabor intenso. Enrolado em granulado belga ou confeitos finos, perfeito para quem aprecia um toque gourmet.</p>
+          <p class="preco">R$ 15,00 -Unidade</p>
+        </div>
+        <img src="brig.jpg" alt="Brigadeiro">
+      </div>
+       <div class="item">
+        <div class="info">
+          <h3>Quindim</h3>
+          <p>Delicioso doce amarelo com coco queimado, cremoso e brilhante, feito à base de gemas de ovos, açúcar e coco ralado, assado até formar uma camada superior dourada e sabor marcante. Uma sobremesa típica que traz o sabor da culinária brasileira em cada colherada.</p>
+          <p class="preco">R$ 15,00 -Unidade</p>
+        </div>
+        <img src="quindim e coco.jpg" alt="Quindim">
+      </div>
+    <div class="item">
+        <div class="info">
+          <h3>Pavê de Cupuaçu</h3>
+          <p>Delicioso pavê preparado com camadas de creme feito com polpa de cupuaçu, biscoitos umedecidos e cobertura de chocolate branco. Uma combinação refrescante e tropical, perfeita para quem quer experimentar um doce regional com toque sofisticado.</p>
+          <p class="preco">R$ 15,00 -Unidade</p>
+        </div>
+        <img src="pavec.png" alt="pavec">
+      </div>
+    </section>
+
+    <!-- BEBIDAS -->
+    <section id="bebidas" class="categoria">
+      <h2>BEBIDAS</h2>
+      <div class="item">
+        <div class="info">
+          <h3>Suco Natural de Laranja</h3>
+          <p>Suco feito na hora com laranjas frescas.</p>
+          <p class="preco">R$ 10,00</p>
+        </div>
+        <img src="suco-laranja.jpg" alt="Suco de Laranja">
+      </div>
+    </section>
+  </div>
+
+  <script>
+    function filtrarCategoria() {
+      const categoriaSelecionada = document.getElementById("filtroCategoria").value;
+      const categorias = document.querySelectorAll(".categoria");
+
+      categorias.forEach(secao => {
+        if (categoriaSelecionada === "todas" || secao.id === categoriaSelecionada) {
+          secao.classList.add("ativa");
+        } else {
+          secao.classList.remove("ativa");
+        }
+      });
+    }
+
+    function filtrarProdutos() {
+      const termo = document.getElementById("pesquisaProduto").value.toLowerCase();
+      const categorias = document.querySelectorAll(".categoria");
+
+      categorias.forEach(secao => {
+        const itens = secao.querySelectorAll(".item");
+        let encontrou = false;
+
+        itens.forEach(item => {
+          const nome = item.querySelector("h3").textContent.toLowerCase();
+          const descricao = item.querySelector("p").textContent.toLowerCase();
+
+          if (nome.includes(termo) || descricao.includes(termo)) {
+            item.style.display = "flex";
+            encontrou = true;
+          } else {
+            item.style.display = "none";
+          }
+        });
+
+        // Mostrar a seção apenas se tiver pelo menos um item visível
+        secao.style.display = encontrou ? "block" : "none";
+      });
+    }
+  </script>
+</body>
+</html>

@@ -270,8 +270,71 @@ p strong {
   background-color: #b89117;
 }
 
-.container1 {
+.container1{
   max-width: 600px;
   margin: 100px auto;
   padding: 20px;
 }
+
+
+.menuf h1 {
+  font-size: 32px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+
+
+.carrossel {
+  background-color: #23456a;
+  position: relative;
+  max-width: 600px;
+  margin: auto;
+  overflow: hidden;
+  
+}
+
+
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slides img {
+  width: 100%;
+  flex-shrink: 0;
+  border-radius: 10px;
+}
+
+button.prev,
+button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  border: none;
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+button.prev {
+  left: 10px;
+}
+
+button.next {
+  right: 10px;
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+
