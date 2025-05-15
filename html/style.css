@@ -151,6 +151,7 @@ body {
   margin: 0 auto 20px auto;
   font-size: 25px;
   line-height: 1.6;
+  color:#fefae0
 }
 
 .imagens-sobre {
@@ -177,21 +178,25 @@ body {
   margin-bottom: 20px;
 }
 
-.imagem-unidade {
-  width: 200px;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  display: inline-block;    
-  margin: 10px;
+.unidades p {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #23456a;
+  text-align: center;
 
 }
+.imagem-unidade {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  flex-wrap: wrap;
+}
+
 
 .imagem-unidade img {
   width: 200px;
   border-radius: 10px;
-  justify-content: center;
 }
-
 
 .rodape {
   background-color: #f9fbfc;
@@ -263,4 +268,10 @@ p strong {
 
 .button:hover {
   background-color: #b89117;
+}
+
+.container1 {
+  max-width: 600px;
+  margin: 100px auto;
+  padding: 20px;
 }
