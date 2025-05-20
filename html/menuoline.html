@@ -14,8 +14,8 @@
 
     /* Cabeçalho */
     header {
-      background-color: #000;
-      color: #fff;
+      background-color: #000000;
+      color: #FEFAE0;
       padding: 20px 0;
     }
 
@@ -30,23 +30,32 @@
 
     .header-left h1 {
       margin: 0;
-      font-size: 28px;
+      font-size: 35px;
     }
 
     .header-left p {
-      margin: 5px 0 0;
-      font-size: 14px;
+      margin: 10px 0 0;
+      font-size: 20spx;
     }
 
     .header-left a {
       color: #fff;
       text-decoration: none;
-      margin-right: 5px;
+      margin-right: 50px;
     }
 
     .header-left a:hover {
-      text-decoration: underline;
+      text-decoration: center;
     }
+  
+    .navbar {
+  width: 95%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
 
     .header-right img {
       width: 70px;
@@ -95,6 +104,8 @@
     .categoria h2 {
       margin-top: 40px;
       margin-bottom: 15px;
+      text-align: center;
+      margin-bottom: 20px;
     }
 
     .item {
@@ -110,8 +121,11 @@
 
     .info {
       max-width: 70%;
+      flex: 1;
+      padding-right: 20px;
     }
-
+    
+   
     .info h3 {
       margin: 0;
       font-size: 20px;
@@ -133,25 +147,49 @@
       border-radius: 10px;
       object-fit: cover;
     }
+
+    .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    max-width: 1000px;
+    margin: 10px auto; /* centraliza */
+    }
+.item img {
+width: 80px;
+height: 80px;
+border-radius: 8px;
+object-fit: cover;
+}
+
   </style>
 </head>
 <body>
 
   <!-- Cabeçalho com logo e links -->
+
+  
   <header>
     <div class="header-container">
       <div class="header-left">
         <h1>Palácio Tropical</h1>
         <p>
-          <a href="#">Ver mais</a> –
-          <a href="#">Avaliar estabelecimento</a><br>
-          <a href="#">Ver tempo e taxa de entrega</a> <strong><a href="cardapio.html">VOLTAR</a></strong>
+          <nav></nav>
+          <a href="#">Avaliar estabelecimento</a>
+          <a href="#">Ver tempo e taxa de entrega</a> 
+          <strong><a href="cardapio.html">VOLTAR</a></strong>
         </p>
       </div>
       <div class="header-right">
         <img src="logop.png" alt="Logo do Palácio Tropical">
       </div>
     </div>
+    </nav>
   </header>
 
   <div class="container">
@@ -340,6 +378,14 @@ Serve: 1 porção.</p>
         </div>
         <img src="pudim.jpg" alt="Pudim de Leite">
       </div>
+  <div class="item">
+    <div class="info">
+    <h3>Pamonha</h3>
+    <p>Feita com milho verde fresquinho, nossa pamonha é tradição e sabor em cada mordida. Doce ou salgada, cremosa por dentro e com aquele gostinho de comida feita com carinho.</p>
+    <p class="preco">R$ 15,00 - Unidade</p>
+  </div>
+  <img src="panhoma.png" alt="Pamonha">
+</div>
      <div class="item">
         <div class="info">
           <h3>Brigadeiro de chocolate belga</h3>
@@ -356,6 +402,7 @@ Serve: 1 porção.</p>
         </div>
         <img src="quindim e coco.jpg" alt="Quindim">
       </div>
+   
     <div class="item">
         <div class="info">
           <h3>Pavê de Cupuaçu</h3>
@@ -365,22 +412,107 @@ Serve: 1 porção.</p>
         <img src="pavec.png" alt="pavec">
       </div>
     </section>
+  </div>
 
     <!-- BEBIDAS -->
-    <section id="bebidas" class="categoria">
+  <section id="bebidas" class="categoria">
       <h2>BEBIDAS</h2>
+     
       <div class="item">
         <div class="info">
           <h3>Suco Natural de Laranja</h3>
-          <p>Suco feito na hora com laranjas frescas.</p>
+          <p>100% fruta, sem adição de açúcar, espremido na hora para manter o sabor fresco e nutritivo que você merece.</p>
           <p class="preco">R$ 10,00</p>
         </div>
-        <img src="suco-laranja.jpg" alt="Suco de Laranja">
+        <img src="sucola.jpg" alt="Suco de Laranja">
+      </div>
+     <div class="item">
+        <div class="info">
+          <h3>Limonada Suiça</h3>
+          <p>A combinação perfeita de limão fresco com um toque suave de leite condensado e gelo, cremosa e super refrescante!
+
+Ideal para qualquer hora do dia. Experimente agora e sinta a diferença!</p>
+          <p class="preco">R$ 10,00</p>
+        </div>
+        <img src="limo.jpg" alt="Limonada">
+      </div>
+  <div class="item">
+        <div class="info">
+          <h3>Vinho</h3>
+          <p>Perfeito para momentos especiais. Aromático, encorpado e com aquele toque de sofisticação que agrada todos os paladares.</p>
+          <p class="preco">R$ 75,00 -A Garrafa </p>
+        </div>
+        <img src="vinho.jpg" alt="Limonada">
+      </div>
+  <div class="item">
+        <div class="info">
+          <h3>Tereré Gelado</h3>
+          <p>O clássico do Centro-Oeste! Refrescante, natural e cheio de tradição. Experimente com limão, hortelã ou do jeito raiz, com erva pura!</p>
+          <p class="preco">R$ 30,00 </p>
+        </div>
+        <img src="terere.jpg" alt="Limonada">
+      </div>
+  <div class="item">
+        <div class="info">
+          <h3>Chá da Terra</h3>
+          <p>Uma infusão típica brasileira feita com folhas nativas, como capim-cidreira, erva-doce e casca de laranja. Perfeito para relaxar com sabor e saúde.</p>
+          <p class="preco">R$ 20,00 </p>
+        </div>
+        <img src="chá.webp" alt="Limonada">
+      </div>
+  <div class="item">
+       <div class="info">
+          <h3> Licor de Pequi</h3>
+          <p>Uma criação exclusiva da casa! O sabor exótico e marcante do pequi agora em forma de licor suave, levemente adocicado e surpreendentemente delicioso. Um brinde à brasilidade!</p>
+          <p class="preco">R$ 110,00 </p>
+        </div>
+        <img src="licor de pequi.jpg" alt="Limonada">
+      </div>
+  <div class="item">
+      <div class="info">
+          <h3> Sucos Naturais</h3>
+          <p> Seleção especial de sucos, feitos com frutas frescas, direto da natureza para o seu copo:
+
+<p>Abacaxi com Hortelã – Combinação perfeita de frescor e sabor!</p>
+<p> Morango Natural – Doce na medida certa, feito com fruta de verdade.</p>
+<p>Manga – Cremoso, aromático e irresistível!</p>
+<p>Melancia Geladinha – Leve, hidratante e refrescante.</p>
+<p>Laranja com Cenoura e Beterraba – Saúde e sabor no mesmo copo.</p>
+
+ Todos os nossos sucos são naturais, sem conservantes e preparados com muito cuidado. Peça o seu favorito ou monte sua mistura personalizada!</p>
+          <p class="preco">R$ 40,00 </p>
+        </div>
+        <img src="sucoref.png" alt="Limonada">
+      </div>
+   <div class="item">
+        <div class="info">
+          <h3>  Refrigerantes </h3>
+          <p> Aquele toque borbulhante que não pode faltar! Escolha entre os clássicos e mate sua sede com muito mais sabor.</p>
+          <p class="preco">R$ 20,00 </p>
+        </div>
+        <img src="refri.png" alt="Limonada">
+      </div>
+    <div class="item">
+        <div class="info">
+          <h3>  Suco de Guaraná Natural</h3>
+          <p> Preparado com a fruta do guaranazeiro, é levemente adocicado, com sabor único e aroma marcante. Ideal para quem busca energia e vitalidade de forma natural!</p>
+          <p class="preco">R$ 20,00 </p>
+        </div>
+        <img src="Suco-de-guaraná.jpg" alt="Limonada">
       </div>
     </section>
   </div>
 
+
+
+
+
+
   <script>
+ 
+    
+
+    
     function filtrarCategoria() {
       const categoriaSelecionada = document.getElementById("filtroCategoria").value;
       const categorias = document.querySelectorAll(".categoria");

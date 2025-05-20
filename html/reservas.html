@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reserva GetIn Clone</title>
+  <link rel="stylesheet" href="style2.css" />
+  <script defer>
+    function abrirModal() {
+      document.getElementById("modal").style.display = "flex";
+    }
+
+    function fecharModal() {
+      document.getElementById("modal").style.display = "none";
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <!-- Área da conta -->
+    <div class="login-box">
+      <h2>Acesse ou crie sua conta</h2>
+      <p><em>Faça login e acompanhe sua posição nas filas e reservas.</em></p>
+      <button class="btn-entrar" onclick="abrirModal()">Entrar</button>
+    </div>
+
+    <!-- Área de reserva -->
+    <div class="reserva-box">
+      <h2>Faça sua reserva</h2>
+      <p><em>Encontre a sua reserva ideal</em></p>
+      <input type="text" placeholder="Data desejada" />
+      <input type="text" placeholder="Nº de pessoas" />
+      <input type="text" placeholder="Melhor horário" />
+      <button class="btn-reservar">Encontrar reservas</button>
+
+      <div class="button">
+        <strong><a href="cardapio.html">VOLTAR</a></strong>
+      </div>
