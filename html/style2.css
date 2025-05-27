@@ -13,7 +13,7 @@ body {
 }
 
 .login-box {
-  background: #463434;
+  background: #268358;
   color: white;
   padding: 30px;
   border-radius: 15px;
@@ -21,7 +21,7 @@ body {
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.login-box .btn-entrar {
+.login-box .btn-entrar  {
   background: white;
   color: black;
   border: 2px solid black;
@@ -49,7 +49,7 @@ body {
 }
 
 .btn-reservar {
-  background: #0c915e;
+  background: #202c28;
   color: white;
   border: none;
   width: 100%;
@@ -113,3 +113,34 @@ body {
   cursor: pointer;
 }
 
+.button {
+  background: #080808;
+  text-align:left;
+  border: none;
+  width: 20%;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.button a {
+  color: #f0f0f0;
+}
+
+.container1 {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px;
+}
+
+.ava-box {
+  background: #268358;
+  color: white;
+  padding: 30px;
+  border-radius: 15px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
