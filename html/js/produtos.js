@@ -96,9 +96,12 @@ function renderProdutos(produtos){
             container3.appendChild(card);
         }
     });
+
+   
 }
 
 function filtrarCategoria() {
+   
       const categoriaSelecionada = document.getElementById("filtroCategoria").value;
       const categorias = document.querySelectorAll(".categoria");
 
